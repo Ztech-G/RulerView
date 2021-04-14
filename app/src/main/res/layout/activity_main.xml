@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <com.ztech.lib.RulerView
+        android:id="@+id/rv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lengthOfRuler="50"
+        app:pOrn="POSITIVE"
+        android:background="#8A215CAC"
+        app:lineColor="#DE1414"
+        app:textColor="#055223"
+        app:textSize="20sp"
+        app:lineLength="30dp"
+        app:lineWidth="2dp"
+        app:xOry="Y_AXIS" />
+
+    <com.ztech.lib.RulerView
+        android:id="@+id/rv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lengthOfRuler="60"
+        app:lineColor="#DE1414"
+        app:textColor="#A323D3"
+        app:textSize="20sp"
+        app:lineLength="30dp"
+        app:lineWidth="2dp"
+        app:pOrn="NEGATIVE"
+        app:xOry="X_AXIS" />
+
+    <com.ztech.lib.RulerView
+        android:id="@+id/rv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:pOrn="NEGATIVE"
+        app:xOry="Y_AXIS" />
+
+    <com.ztech.lib.RulerView
+        android:id="@+id/rv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lengthOfRuler="80"
+        app:pOrn="POSITIVE"
+        app:xOry="X_AXIS" />
+</LinearLayout>

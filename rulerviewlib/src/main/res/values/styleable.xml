@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RulerView">
+        <!-- 刻度线颜色 -->
+        <attr name="lineColor" format="color" />
+        <!-- 文本颜色-->
+        <attr name="textColor" format="color" />
+        <!-- 刻度尺方向-->
+        <attr name="xOry">
+            <!-- x轴-->
+            <enum name="X_AXIS" value="1" />
+            <!-- y轴-->
+            <enum name="Y_AXIS" value="2" />
+
+        </attr>
+        <!-- 刻度尺方向-->
+        <attr name="pOrn">
+            <!-- x轴-->
+            <enum name="POSITIVE" value="3" />
+            <!-- y轴-->
+            <enum name="NEGATIVE" value="4" />
+
+        </attr>
+        <!-- 刻度值文本大小 -->
+        <attr name="textSize" format="dimension" />
+        <!-- 刻度线宽度 -->
+        <attr name="lineWidth" format="dimension" />
+        <!-- 刻度线最大长度 -->
+        <attr name="lineLength" format="dimension" />
+        <!-- 尺子长度 -->
+        <attr name="lengthOfRuler" format="integer" />
+    </declare-styleable>
+</resources>

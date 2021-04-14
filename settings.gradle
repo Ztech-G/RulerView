@@ -1,0 +1,3 @@
+include ':rulerviewlib'
+include ':app'
+rootProject.name = "RulerView"
