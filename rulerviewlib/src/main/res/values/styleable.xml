@@ -15,9 +15,9 @@
         </attr>
         <!-- 刻度尺方向-->
         <attr name="pOrn">
-            <!-- x轴-->
+            <!-- 正向-->
             <enum name="POSITIVE" value="3" />
-            <!-- y轴-->
+            <!-- 反向-->
             <enum name="NEGATIVE" value="4" />
 
         </attr>
