@@ -201,6 +201,10 @@ public class RulerView extends View {
         }
     }
 
+    /**
+     * 绘制正向的刻度线和刻度值
+     * @param canvas 画布
+     */
     private void drawPositiveTextAndLines(Canvas canvas) {
         for (int i = 0; i < lengthOfRuler + 1; i++) {
             if (i % 5 == 0) {
@@ -208,7 +212,7 @@ public class RulerView extends View {
                 int remainder = i / 5;
                 if (remainder % 2 == 0) {
                     //商除2整除表示是 0 10 20 ...
-                    drawTextLine(canvas, i, getTextLength());
+                    drawText(canvas, i, getTextLength());
                     drawPositiveLine(canvas, i, getTextLength(), lineLength + getTextLength());
                 } else {
                     drawPositiveLine(canvas, i, lineLength * 0.3f + getTextLength(), lineLength + getTextLength());
@@ -219,6 +223,10 @@ public class RulerView extends View {
         }
     }
 
+    /**
+     * 绘制反向的刻度线和刻度值
+     * @param canvas 画布
+     */
     private void drawNegativeTextAndLines(Canvas canvas) {
         //2.绘制数字和刻度线
         for (int i = 0; i < lengthOfRuler + 1; i++) {
@@ -228,7 +236,7 @@ public class RulerView extends View {
                 if (remainder % 2 == 0) {
                     //商除2整除表示是 0 10 20 ...
                     drawNegativeLine(canvas, i, lineLength);
-                    drawTextLine(canvas, i, lineLength + getTextLength());
+                    drawText(canvas, i, lineLength + getTextLength());
                 } else {
                     drawNegativeLine(canvas, i, lineLength * 0.7f);
                 }
@@ -245,7 +253,7 @@ public class RulerView extends View {
      * @param degreeScale 刻度值
      * @param y 文本开始点的距离 相对于x轴或y轴
      */
-    private void drawTextLine(Canvas canvas, int degreeScale, float y) {
+    private void drawText(Canvas canvas, int degreeScale, float y) {
         switch (xOry) {
             case X_AXIS:
                 canvas.drawText(String.valueOf(degreeScale)
@@ -292,8 +300,11 @@ public class RulerView extends View {
     }
 
     /**
-     * 绘制 刻度线
-     * length 刻度线长度
+     * 绘制正向的刻度线
+     * @param canvas 画布
+     * @param x 刻度值
+     * @param startPoint 开始点的位置 y值
+     * @param endPoint 结束点的位置 y值
      */
     private void drawPositiveLine(Canvas canvas, int x, float startPoint, float endPoint) {
         switch (xOry) {
@@ -319,16 +330,28 @@ public class RulerView extends View {
 
     }
 
-
+    /**
+     * 获取字体高度
+     * @return
+     */
     public int getFontHeight() {
         Paint.FontMetrics fm = textPaint.getFontMetrics();
         return (int) Math.ceil(fm.descent - fm.top);
     }
 
+    /**
+     * 获取字体宽度
+     * @param text
+     * @return
+     */
     public float getFontWidth(String text) {
         return textPaint.measureText(text);
     }
 
+    /**
+     * 获取文本长度
+     * @return
+     */
     public float getTextLength() {
         float result = 0;
         switch (xOry) {
