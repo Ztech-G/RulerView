@@ -13,7 +13,7 @@
 |6| lineWidth| dimension | 刻度线宽度|
 |7| lineLength| dimension | 刻度线最大长度|
 |8| lengthOfRuler| int | 尺子长度（单位：mm）|
-# 引用
+# 引用:
 ```gradle
     maven {
             url "https://jitpack.io"
